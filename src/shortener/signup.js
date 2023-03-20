@@ -1,12 +1,42 @@
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 const Signup =(signup)=>{
     const [name,setName]= useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("")
+    const navigate = useNavigate();
+
+    const signUp = async(event)=>{
+        event.preventDefault();
+      try {
+        const res = await fetch(
+          "https://url-shortener-phi-eight.vercel.app/signup",
+          {
+            method:"POST",
+            body:JSON.stringify({
+              name,
+              email,
+              password
+            }
+            ),
+            headers: {
+              "Content-Type": "application/json",
+            }
+          }
+        );
+
+        const data = await res.json();
+        localStorage.setItem("x-auth-token",data.Authtoken);
+        navigate("/")
+
+      } catch (error) {
+        console.log(error)
+      }
+    }
     return(
         <div className="container-lg">
-            <form onsubmit={signup}>
+            <form onSubmit={(event)=>signUp(event)}>
 
             <div className="input-group mb-3 ">
 
@@ -55,7 +85,7 @@ const Signup =(signup)=>{
             />
 
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" className="btn btn-success">Submit</button>
 
             </form>
         </div>
