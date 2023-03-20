@@ -140,6 +140,7 @@ function Homepage(){
                 >
                   <div className="card-body">
                     <h5 className="card-title">{data.longUrl}</h5>
+                    <h6>Sho(r)t Url:</h6>
                     <a href={data.longUrl} className="card-link" target="_blank">
                       {data.shortenedUrl}
                     </a>
