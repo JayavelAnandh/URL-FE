@@ -28,7 +28,7 @@ function Homepage(){
         setShortData(data);
       } catch (error) {
         if(!(localStorage.getItem("x-auth-token"))){
-            navigate("/signup")
+            navigate("/")
             alert("Signup to continue")
         }
         console.log("Error", error);
@@ -59,7 +59,7 @@ function Homepage(){
         setlongUrl("");
       } catch (error) {
         if(!(localStorage.getItem("x-auth-token"))){
-            navigate("/signup")
+            navigate("/")
             alert("Signup to continue")
         }
         console.log(error);
@@ -79,7 +79,7 @@ function Homepage(){
         getShortData();
       } catch (error) {
         if(!(localStorage.getItem("x-auth-token"))){
-            navigate("/signup")
+            navigate("/")
             alert("Signup to continue")
         }
         
@@ -97,7 +97,7 @@ function Homepage(){
           <h1>Welcome to BIG SH0(R)T</h1>
         </div>
         <div className="container-lg accbar">
-          <button type="button" className="btn btn-primary" onClick={()=>navigate("/signup")} >
+          <button type="button" className="btn btn-primary" onClick={()=>navigate("/")} >
             SignUp
           </button>
           <button type="button" className="btn btn-primary" onClick={()=>navigate("/login")}>

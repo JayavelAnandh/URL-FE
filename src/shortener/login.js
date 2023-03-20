@@ -28,7 +28,7 @@ function Login(){
         const data = await res.json();
         alert(data.message)
         localStorage.setItem("x-auth-token",data.token);
-        navigate("/")
+        navigate("/homepage")
     }
     return(
         <div className="container-lg">
@@ -72,7 +72,7 @@ function Login(){
 
             <br/>
             <div>
-              <button type="button" onClick={()=>navigate("/signup")}>New to here?</button>
+              <button type="button" onClick={()=>navigate("/")}>New to here?</button>
             </div>
             </div>
     )

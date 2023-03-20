@@ -28,7 +28,7 @@ const Signup =(signup)=>{
 
         const data = await res.json();
         localStorage.setItem("x-auth-token",data.Authtoken);
-        navigate("/")
+        navigate("/homepage")
 
       } catch (error) {
         console.log(error)
