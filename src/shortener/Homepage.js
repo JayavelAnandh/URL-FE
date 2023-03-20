@@ -6,6 +6,14 @@ function Homepage(){
     const [longUrl, setlongUrl] = useState("");
     const navigate = useNavigate()
   
+    useEffect(()=>{
+        if(!(localStorage.getItem("x-auth-token"))){
+            navigate("/signup")
+            alert("Signup to continue")
+        }
+        else getShortData();
+    })
+
     const getShortData = async () => {
       try {
         const response = await fetch(
@@ -27,9 +35,7 @@ function Homepage(){
       }
     };
   
-    useEffect(() => {
-      getShortData();
-    }, []);
+    
   
     const handleSubmit = async (event) => {
       event.preventDefault();
