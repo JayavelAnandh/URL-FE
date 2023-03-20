@@ -61,7 +61,7 @@ const Signup =(signup)=>{
               </span>
             </div>
             <input
-              type="text"
+              type="email"
               className="form-control"
               aria-label="Sizing example input"
               aria-describedby="inputGroup-sizing-default"
