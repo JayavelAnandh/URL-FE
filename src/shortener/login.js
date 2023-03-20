@@ -69,6 +69,11 @@ function Login(){
             <button type="submit" className="btn btn-success">Submit</button>
 
             </form>
+
+            <br/>
+            <div>
+              <button type="button" onClick={()=>navigate("/signup")}>New to here?</button>
+            </div>
             </div>
     )
 }

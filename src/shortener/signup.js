@@ -88,6 +88,11 @@ const Signup =(signup)=>{
             <button type="submit" className="btn btn-success">Submit</button>
 
             </form>
+
+            <br/>
+            <div>
+              <button type="button" onClick={()=>navigate("/login")}>Already Have a account?</button>
+            </div>
         </div>
         
     )
