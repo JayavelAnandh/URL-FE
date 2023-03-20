@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: aliceblue;
 }
 
 .App-logo {
@@ -35,4 +36,48 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.display{
+  display: grid;
+  padding: 3%;
+  background-color: burlywood;
+  border-right: 5px solid rgb(224, 141, 32);
+  border-bottom: 5px solid rgb(224, 141, 32);
+  box-shadow: 5px 5px 10px rgb(88, 86, 86);
+}
+.card{
+  transition: transform .50s;
+}
+.card:hover{
+  transform: scale(1.10);
+  box-shadow: 5px 5px 10px rgb(88, 86, 86);
+  
+}
+.urlbar{
+  padding: 1%;
+  margin-top:50px;
+  margin-bottom: 20px;
+  background-color: burlywood;
+  border-right: 5px solid rgb(224, 141, 32);
+  border-bottom: 5px solid rgb(224, 141, 32);
+  box-shadow: 5px 5px 10px rgb(88, 86, 86);
+}
+.accbar{
+  padding: 1%;
+
+  margin-bottom: 20px;
+  background-color: burlywood;
+  border-right: 5px solid rgb(224, 141, 32);
+  border-bottom: 5px solid rgb(224, 141, 32);
+  box-shadow: 5px 5px 10px rgb(88, 86, 86);
+ 
+}
+.titlebar{
+  padding: 1%;
+  margin-top:50px;
+  background-color: burlywood;
+  border-right: 5px solid rgb(224, 141, 32);
+  border-bottom: 5px solid rgb(224, 141, 32);
+  box-shadow: 5px 5px 10px rgb(88, 86, 86);
 }
