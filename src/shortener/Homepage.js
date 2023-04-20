@@ -96,14 +96,7 @@ function Homepage(){
         <div className="container-lg titlebar">
           <h1>Welcome to BIG SH0(R)T</h1>
         </div>
-        <div className="container-lg accbar">
-          <button type="button" className="btn btn-primary" onClick={()=>navigate("/")} >
-            SignUp
-          </button>
-          <button type="button" className="btn btn-primary" onClick={()=>navigate("/login")}>
-            LogIn
-          </button>
-        </div>
+        
   
         <div className="container-lg urlbar">
           <form onSubmit={handleSubmit}>
@@ -142,7 +135,7 @@ function Homepage(){
                     <h5 className="card-title">{data.longUrl}</h5>
                     <h6>Sho(r)t Url:</h6>
                     <a href={data.longUrl} className="card-link" target="_blank">
-                      {data.shortenedUrl}
+                      `https://url-shortener-phi-eight.vercel.app/{data.shortenedUrl}`
                     </a>
                     <br />
                     <button
