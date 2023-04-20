@@ -12,7 +12,7 @@ function Homepage(){
             alert("Signup to continue")
         }
         else getShortData();
-    })
+    },[])
 
     const getShortData = async () => {
       try {
