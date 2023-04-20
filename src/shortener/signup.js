@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
+import "../stylings/login.css";
 
 const Signup =(signup)=>{
     const [name,setName]= useState("");
@@ -36,16 +37,18 @@ const Signup =(signup)=>{
     }
     return(
         <div className="container-lg">
-            <form onSubmit={(event)=>signUp(event)}>
-
-            <div className="input-group mb-3 ">
-
-            <div className="input-group-prepend">
+            <form onSubmit={(event)=>signUp(event)} className="group" >
+            <h2> Signup to continue...</h2>
+            <div className="input-group mb-3 row">
+              
+            
+            <div className="input-group-prepend col-md-3">
               <span className="input-group-text" id="inputGroup-sizing-default">
                     Enter your name
               </span>
             </div>
-            <input
+            <div className="col-md-9">
+            <input 
               type="text"
               className="form-control"
               aria-label="Sizing example input"
@@ -53,13 +56,16 @@ const Signup =(signup)=>{
               value={name}
               onChange={(event) => setName(event.target.value)}
             />
+            </div>
+            <br/>
+            <br/>
 
-
-           <div className="input-group-prepend">
+           <div className="input-group-prepend col-md-3">
               <span className="input-group-text" id="inputGroup-sizing-default">
                 Enter a valid E-mail
               </span>
             </div>
+            <div className="col-md-9">
             <input
               type="email"
               className="form-control"
@@ -68,13 +74,15 @@ const Signup =(signup)=>{
               value={email}
               onChange={(event) => setEmail(event.target.value)}
             />
-
-
-            <div className="input-group-prepend">
+            </div>
+            <br/>
+            <br/>
+            <div className="input-group-prepend col-md-3">
               <span className="input-group-text" id="inputGroup-sizing-default">
                 create a password
               </span>
             </div>
+            <div className="col-md-9">
             <input
               type="text"
               className="form-control"
@@ -83,16 +91,18 @@ const Signup =(signup)=>{
               value={password}
               onChange={(event) => setPassword(event.target.value)}
             />
-
             </div>
-            <button type="submit" className="btn btn-success">Submit</button>
+            </div>
+            <div className="centerPlace">
+              <button type="submit" className="btn btn-success">Submit</button>
+              <button type="button" className="btn btn-info" onClick={()=>navigate("/login")}>Already Have a account?</button>
+            </div>
+            
 
             </form>
 
             <br/>
-            <div>
-              <button type="button" onClick={()=>navigate("/login")}>Already Have a account?</button>
-            </div>
+            
         </div>
         
     )

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
-
+import "../stylings/login.css";
 function Login(){
 
     const [email,setEmail]= useState();
@@ -32,13 +32,15 @@ function Login(){
     }
     return(
         <div className="container-lg">
-            <form onSubmit={(event)=>{login(event)}}>
+            <form onSubmit={(event)=>{login(event)}} className="group">
+            <h2>Login to continue...</h2>
 
-            <div className="input-group mb-3 ">
+
+            <div className="input-group mb-3">
 
            <div className="input-group-prepend">
               <span className="input-group-text" id="inputGroup-sizing-default">
-                Enter your Registered E-mail
+                Enter your E-mail
               </span>
             </div>
             <input
@@ -66,14 +68,14 @@ function Login(){
             />
 
             </div>
-            <button type="submit" className="btn btn-success">Submit</button>
-
-            </form>
-
-            <br/>
-            <div>
-              <button type="button" onClick={()=>navigate("/")}>New to here?</button>
+            
+            <div className="centerPlace" >
+              <button type="submit" className="btn btn-success">Submit</button>
+              <br/>
+              <br/>
+              <button type="button" className="btn btn-info" onClick={()=>navigate("/")}>New to here?</button>
             </div>
+            </form>            
             </div>
     )
 }

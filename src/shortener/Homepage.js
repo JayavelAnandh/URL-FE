@@ -17,7 +17,7 @@ function Homepage(){
     const getShortData = async () => {
       try {
         const response = await fetch(
-          "https://url-shortener-phi-eight.vercel.app/urlRoutes",
+          "https://url-shortener-phi-eight.vercel.app/urlRoutes/all",
           {
             method: "GET",
             headers: {
@@ -133,7 +133,8 @@ function Homepage(){
                 >
                   <div className="card-body">
                     <h5 className="card-title">{data.longUrl}</h5>
-                    <h6>Sho(r)t Url:</h6>
+                    <br/>
+                    <h5><u>Sho(r)t Url:</u></h5>
                     <a href={data.longUrl} className="card-link" target="_blank">
                       `https://url-shortener-phi-eight.vercel.app/{data.shortenedUrl}`
                     </a>
